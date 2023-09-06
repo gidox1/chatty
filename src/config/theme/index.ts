@@ -76,5 +76,12 @@ export const theme = extendTheme({
   },
   components: {
     Button: Button as unknown,
+    Input: {
+      baseStyle: {
+        _focus: {
+          boxShadow: 'none'
+        }
+      }
+    }
   },
 })

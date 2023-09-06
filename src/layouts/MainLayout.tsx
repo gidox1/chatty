@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react';
 import React, { Fragment } from 'react';
 import bg from '../assets/bg.jpg';
 
-interface MainLayoutProps {
+export interface MainLayoutProps {
     children: React.ReactNode
 }
 
