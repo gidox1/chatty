@@ -1,8 +1,8 @@
-import { Box, Button, Text, Input, VStack, FormHelperText, FormControl, Link } from "@chakra-ui/react"
+import { Box, Button, Text, Input, VStack, FormControl, Link } from "@chakra-ui/react"
 import { Fragment } from "react"
 import { useNavigate } from "react-router-dom";
 
-export const Login = () => {
+export const Register = () => {
   const navigate = useNavigate();
   const handleSubmit = () => navigate('/chat');
 
@@ -10,31 +10,38 @@ export const Login = () => {
       <Fragment>
         <Box w="80%" h="80%" display="flex" flexDirection="column" m="10% auto">
           <Text textAlign="center" m="15% auto 0" fontWeight="bold" fontSize="5xl">
-            Welcome Back!
+            Welcome!
           </Text>
-          <VStack spacing="1rem" w="full" pt="3rem">
+          <VStack spacing="3rem" w="full" pt="3rem">
             <form onSubmit={handleSubmit}>
               <FormControl as='fieldset'>
                 <Input
-                  type="email"
+                  type="text"
+                  name="email"
                   placeholder="Email*"
                   focusBorderColor="#ECEFF6"
                   required={true}
+                  mb="1rem"
                 >
                 </Input>
-                <FormHelperText mb={{base: "10%", md: "10%", lg: "7%"}} opacity="0.5">
-                  This is a sample app with no email verification, dummy emails allowed.
-                </FormHelperText>
+                <Input
+                  type="text"
+                  name="username"
+                  placeholder="Username*"
+                  focusBorderColor="#ECEFF6"
+                  required={true}
+                  mb="1rem"
+                >
+                </Input>
                 <Input
                   type="password"
+                  name="password"
                   placeholder="Password*"
                   focusBorderColor="#ECEFF6"
                   required={true}
+                  mb="1rem"
                 >
                 </Input>
-                <FormHelperText mb="5%" opacity="0.5">
-                  No password rule, just some random stuff you can easily remember.
-                </FormHelperText>
                 <Button 
                   display="flex" 
                   m="10% auto" 
@@ -44,24 +51,24 @@ export const Login = () => {
                   fontSize="20px"
                   type="submit"
                 >
-                  Sign in
+                  Sign up
                 </Button>
                 <Text 
                   m={{base: "5% auto", md: "5% 0 0 20%"}} 
                   textAlign={{ base: "center", md: "initial"}}
                 >
-                  Don't have an account? 
+                  Already have an account? 
                   <Link ml=".2rem" color="green.logo"
-                    onClick={() => {
-                      navigate('/auth', {
-                        state: {
-                          route: "signup",
-                        },
-                        replace: true
-                      })
-                      navigate(0);
-                    }}
-                  >Sign up!</Link>
+                      onClick={() => {
+                        navigate('/auth', {
+                          state: {
+                            route: undefined,
+                          },
+                          replace: true
+                        })
+                        navigate(0);
+                      }}
+                    >Sign in!</Link>
                 </Text>
               </FormControl>
             </form>

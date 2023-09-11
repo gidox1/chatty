@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Auth } from "../pages";
+import { Home, Auth, Chat } from "../pages";
 
 export const router = createBrowserRouter([
   {
@@ -9,5 +9,9 @@ export const router = createBrowserRouter([
   {
     path: "/auth",
     element: <Auth/>,
+  },
+  {
+    path: "/chat",
+    element: <Chat/>,
   }
 ]);

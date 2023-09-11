@@ -38,7 +38,11 @@ export const Home = () => {
               w={{base: "90%", md: "50%"}} h="50px" 
               background="green.logo" color="white" 
               fontSize="20px"
-              onClick={() => navigate("/auth")}
+              onClick={() => navigate("/auth", {
+                state: {
+                  route: "signup"
+                }
+              })}
             >
               Get Started
             </Button>
@@ -46,7 +50,14 @@ export const Home = () => {
               <Link href="/auth" ml=".2rem" color="green.logo">Sign in!</Link>
             </Text>
           </Box>
-          <Box display={{base: "none", md: "unset"}} w={{base: "40%", xl: "35%", lg: "35%", "2xl": "31.5%"}} h={{base: "90%", lg: "80%", md: "60%", xl: "90%", "2xl": "80%"}} borderRadius="50%" mt={{base: "10%", md: "5%"}} background="radial-gradient(#e66465, #9198e5)" position="relative">
+          <Box 
+            display={{base: "none", md: "unset"}} 
+            w={{base: "40%", xl: "35%", lg: "35%", "2xl": "31.5%"}} 
+            h={{base: "90%", lg: "80%", md: "60%", xl: "90%", "2xl": "80%"}} 
+            borderRadius="50%" mt={{base: "10%", md: "5%"}} 
+            background="radial-gradient(#e66465, #9198e5)" 
+            position="relative"
+          >
             <Image src={phone} position="absolute">
             </Image>
           </Box>

@@ -9,7 +9,7 @@ export interface MainLayoutProps {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <Fragment>
-      <Box display="flex" h="100vh" w="100%" margin="auto" bgImage={bg} overflowY="hidden">
+      <Box display="flex" h={window.innerHeight} w="100%" margin="auto" bgImage={bg} overflowY="hidden">
           {children}
       </Box>
     </Fragment>
