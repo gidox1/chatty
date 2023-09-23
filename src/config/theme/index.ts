@@ -1,7 +1,7 @@
 import { extendTheme } from '@chakra-ui/react'
 
 import { colors } from './colors'
-import { Button } from './components'
+import { Button } from './components/Button'
 
 export const theme = extendTheme({
   styles: {
@@ -79,9 +79,9 @@ export const theme = extendTheme({
     Input: {
       baseStyle: {
         _focus: {
-          boxShadow: 'none'
-        }
-      }
-    }
+          boxShadow: 'none',
+        },
+      },
+    },
   },
 })

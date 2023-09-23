@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react"
 import { Fragment } from "react"
 import bg from '../assets/mainbg-ed.png';
-import { Sidebar } from "../config/theme/components/Sidebar";
-import { SearchBar } from "../config/theme/components/SearchBar";
-import { Message } from "../config/theme/components/UserList";
+import { SearchBar } from "../components/SearchBar";
+import { Message } from "../components/UserList";
+import { Sidebar } from "../components/Sidebar";
 
 export const Chat = () => {
   return (
@@ -25,14 +25,20 @@ export const Chat = () => {
             <Box 
               display="flex" 
               flexDirection="column" 
-              w="35%" 
+              w={{
+                base: "100%",
+                md: "45%",
+                lg: "35%"
+              }} 
               h="100%" 
               background="gray.light"
+              position="relative"
               borderRadius={{
                 base: "initial",
                 md: "30px 0 0 30px",
-                lg: "40px 0 0 40px"
+                lg: "40px 0 0 0"
               }}
+              pl="1%"
             >
               <SearchBar/>
               <Message/>

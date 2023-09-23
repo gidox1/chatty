@@ -1,6 +1,6 @@
 import { Box, Input, Image } from "@chakra-ui/react";
 import { Fragment } from "react";
-import searchIcon from '../../../assets/search.png';
+import searchIcon from '../assets/search.png';
 
 export const SearchBar = () => {
   return (
